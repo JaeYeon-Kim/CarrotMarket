@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycler_cv"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cd_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/scottfragmentlow" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="나이키 스캇 프라그먼트 270\n사이즈 팝니다."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/recycler_cv"
+        app:layout_constraintTop_toTopOf="@id/recycler_cv" />
+
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="방화제2동 - 끌올 29초 전"
+        app:layout_constraintStart_toStartOf="@id/mainText"
+        app:layout_constraintTop_toBottomOf="@id/mainText" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="180,000,0원"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/subText"
+        app:layout_constraintTop_toBottomOf="@id/subText" />
+
+    <ImageView
+        android:id="@+id/likeImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/heart"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_cv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/heartText"
+        android:text="1"
+        android:textSize="16sp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@id/likeImage"
+        app:layout_constraintTop_toTopOf="@id/likeImage"
+        app:layout_constraintBottom_toBottomOf="@id/likeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
