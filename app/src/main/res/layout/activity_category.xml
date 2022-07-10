@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_Constraint_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:backgroundTint="#00FF0000"
+            android:src="@drawable/back_button"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:stateListAnimator="@null"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:layout_marginStart="18dp"
+            app:layout_constraintTop_toTopOf="@id/back_btn"
+            app:layout_constraintBottom_toBottomOf="@id/back_btn"
+            app:layout_constraintStart_toEndOf="@id/back_btn"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:background="#80808080"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            app:layout_constraintBottom_toBottomOf="@id/top_Constraint_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_Constraint_layout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/digitalButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="디지털기기"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/laptop" />
+
+            <Button
+                android:id="@+id/popularButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="인기매물"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/star" />
+
+            <Button
+                android:id="@+id/cookingPotButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="생활가전"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/kettle" />
+
+            <Button
+                android:id="@+id/sofaButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:text="가구/인테리어"
+                android:clickable="true"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/sofa" />
+
+            <Button
+                android:id="@+id/baby_button"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="유아동"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/feeding_bottle" />
+
+            <Button
+                android:id="@+id/fairyTale"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="유아도서"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/fairytale_book" />
+
+            <Button
+                android:id="@+id/lifeButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="생활/가공식품"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/cooking_pot" />
+
+            <Button
+                android:id="@+id/sportsButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="스포츠/레저"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/tennis" />
+
+            <Button
+                android:id="@+id/womanBagButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="여성잡화"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/handbag" />
+            <Button
+                android:id="@+id/womanClotheButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="여성의류"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/blouse" />
+
+            <Button
+                android:id="@+id/ManFashionButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="남성패션/잡화"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/poloshirts" />
+
+            <Button
+                android:id="@+id/gameButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="게임/취미"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/joystick" />
+            <Button
+                android:id="@+id/BeautyButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="뷰티/미용"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/cleanser" />
+
+            <Button
+                android:id="@+id/petButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="반려동물용품"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/pet_food_bowl" />
+
+            <Button
+                android:id="@+id/bookButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="도서/티켓/음반"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/cd_game" />
+            <Button
+                android:id="@+id/plantButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="식물"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/plant" />
+
+            <Button
+                android:id="@+id/boxButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="기타 중고물품"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/box" />
+
+            <Button
+                android:id="@+id/carButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="중고차"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/car" />
+
+            <Button
+                android:id="@+id/speakerButton"
+                android:backgroundTint="#00FF0000"
+                android:background="#00FF0000"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="삽니다"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:drawableTop="@drawable/loud_speaker" />
+
+
+
+
+
+
+
+
+
+        </GridLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
