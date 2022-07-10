@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarrotMarket">
         <activity
+            android:name=".CategoryActivity"
+            android:exported="true" />
+        <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
