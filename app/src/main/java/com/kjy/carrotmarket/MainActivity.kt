@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kjy.carrotmarket.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,13 +25,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
         // 액션바를 툴바에 적용(툴바를 사용한다.)
         setSupportActionBar(binding.toolbar)
         // 툴바 기본 타이틀 제거
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+
         // 데이터 생성 코드
-        val data:MutableList<Memo> = loadRecyclerData()
+        val data: MutableList<Memo> = loadRecyclerData()
         // 어댑터 생성후 데이터 목록 저장
         var adapter = MyAdapter()
         adapter.listData = data
@@ -39,7 +42,12 @@ class MainActivity : AppCompatActivity() {
         binding.RecyclerView.adapter = adapter
         binding.RecyclerView.layoutManager = LinearLayoutManager(this)
         // 디바이더 아이템 데코레이션 메서드로 리사이클러뷰 각 아이템마다 구분선을 그어준다.
-        binding.RecyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
+        binding.RecyclerView.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                LinearLayoutManager.VERTICAL
+            )
+        )
 
         // 스피너 사용을 위한 리스트 생성
         var dataList = listOf("방화동", "화곡동", "염창동", "내 동네 설정")
@@ -48,16 +56,19 @@ class MainActivity : AppCompatActivity() {
         // 문자열로 구성했기 때문에 데이터 타입 = String
         // 파라미터 -> (3가지!! 스피너를 그리기 위한 컨텍스트, 목록 하나하나 그려질 레이아웃, 어댑터에서 사용할 데이터)
 
-        var spinnerAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dataList)
+        var spinnerAdapter =
+            ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dataList)
         binding.Spinner.adapter = spinnerAdapter
 
         // 스피너 클릭 이벤트 구현
-        binding.Spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+        binding.Spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             // 아이템이 선택되었을 때
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long
+            override fun onItemSelected(
+                parent: AdapterView<*>?, view: View?, position: Int, id: Long
             ) {
                 binding.spinnerText.text = dataList.get(position)
             }
+
             // 아무것도 선택되지 않았을 경우
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
@@ -70,21 +81,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 툴바 메뉴 선택시 이벤트 처리 함수
-    override fun onOptionsItemSelected(item: MenuItem): Boolean  {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when(item.itemId) {
+        when (item.itemId) {
             R.id.search -> {
-                Toast.makeText(this,"검색 버튼을 클릭하였습니다.", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, SearchActivity::class.java)
+                startActivity(intent)
+                finish()
             }
 
             R.id.menu -> {
                 val intent = Intent(this, CategoryActivity::class.java)
                 startActivity(intent)
+                finish()
             }
 
             R.id.notification -> {
-                Toast.makeText(this,"알림 버튼을 클릭하였습니다.", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, NotificationActivity::class.java)
+                startActivity(intent)
+                finish()
             }
+
+
         }
 
         return super.onOptionsItemSelected(item)

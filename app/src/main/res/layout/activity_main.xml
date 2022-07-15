@@ -56,7 +56,7 @@
         android:id="@+id/topLine"
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:background="#80808080"
+        android:background="#33808080"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="@id/frameLayout"
         app:layout_constraintBottom_toBottomOf="@id/toolbar"
@@ -72,17 +72,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RecyclerView"
                 android:layout_marginHorizontal="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
-
-        </androidx.core.widget.NestedScrollView>
 
     </FrameLayout>
 
