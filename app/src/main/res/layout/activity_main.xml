@@ -87,9 +87,23 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:backgroundTint="#ff7f00"
-        android:clickable="true"
+        android:visibility="visible"
         android:src="@drawable/fab_add_icon"
-        android:tint="#fff"
+        app:tint="@color/white"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/white"
+        android:visibility="invisible"
+        android:src="@drawable/cross"
+        app:tint="@color/black"
         app:borderWidth="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent" />

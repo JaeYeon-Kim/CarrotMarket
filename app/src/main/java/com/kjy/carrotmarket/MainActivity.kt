@@ -1,8 +1,10 @@
 package com.kjy.carrotmarket
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.Visibility
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -14,8 +16,11 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kjy.carrotmarket.databinding.ActivityMainBinding
+import com.kjy.carrotmarket.databinding.CustomDialogBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private val context = this
 
     val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
@@ -24,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
 
 
         // 액션바를 툴바에 적용(툴바를 사용한다.)
@@ -71,6 +77,19 @@ class MainActivity : AppCompatActivity() {
 
             // 아무것도 선택되지 않았을 경우
             override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
+
+
+        binding.fabButton.setOnClickListener {
+            val dialog = CustomDialogMain(this)
+            dialog.showMainDialog()
+            val intent = Intent(this, BuySellActivity::class.java)
+            dialog.setOnClickListener(object: CustomDialogMain.ButtonClickListener{
+                override fun onClick(text: String) {
+                    startActivity(intent)
+                }
+            })
         }
     }
 
