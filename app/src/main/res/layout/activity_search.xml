@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/searchToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:clickable="true"
+            android:id="@+id/search_backBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#00FF0000"
+            android:src="@drawable/back_btn" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/topSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:queryBackground="@null"
+            android:background="@drawable/searchview_custom"
+            app:iconifiedByDefault="false"
+            app:queryHint="방화동 근처에서 검색" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/searchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="이웃들이 많이 찾고 있어요!"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchToolbar" />
+
+    <HorizontalScrollView
+        android:id="@+id/hz_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/searchText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:text="알바"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="원피스"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="당근알바"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="창문형에어컨"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="헬스"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="카드지갑"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="속눈썹펌"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="스타벅스프리퀀시"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="필라테스"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                android:text="이케아"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:chipStrokeWidth="1dp"
+                app:chipStrokeColor="#d3d3d3"
+                app:chipBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+
+
+
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
